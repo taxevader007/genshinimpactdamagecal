@@ -56,6 +56,8 @@ Danobase = AtaquePersonaje * (1 + PDC + DC) #output
 
 #Transformativas: 
 
+Danobase = AtaquePersonaje * (1 + PDC + DC)
+
 ()Daño Transformativo = Multiplicador Transformativo*Nivel personaje *(1 + %BonoME) *Multiplicador resistencia 
 
 %BonoME = 16 * Maestría Elemental / (Maestría Elemental + 2000) 
