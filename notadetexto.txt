@@ -18,7 +18,8 @@
 -multiplicador de resistencia (Este último debe ser generado de manera aleatoria en un rango entre 0.5 y 2 únicamente.)
 
 #input
--cuantos personajes hay 1-4 
+-cuantos personajes hay 1-4
+-nombre del personaje 
 -ataque del personaje
 -nivel del personaje
 -PDC

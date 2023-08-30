@@ -17,8 +17,7 @@ public class Calgenshin{
     Double[] ME = new Double[n];
     Double[] PDC = new Double[n];
     Double[] DC = new Double[n];
-
-    String[] MT = {"burning ", "Superconduct " , "Swirl ", "Electro chaged ", "Shattered ", "Overload ", "Bloom ", "Burgeon and hyperbloom"};//MT transformative multiplier
+    
     Double[] MTV ={0.25, 0.5, 0.6, 1.2, 1.5, 2.0, 2.0, 3.0};//MTV transformative multiplier Value
      
     
@@ -37,22 +36,31 @@ public class Calgenshin{
         PDC[n - 1] = scan.nextDouble() ;
       System.out.println("Enter Critical Dammage of the character " + (i + 1 ) );    
         DC[n - 1] = scan.nextDouble() ;
-      
-    }//end ciclo
-
-    for (int i = 0 ; i != n; i++) {
       System.out.println("Enter transformative multiplier of the character" + (i + 1 ) + "\n 0 for burning \n 1 for Superconduct \n 2 for Swirl \n 3 for Electro chaged \n 4 for Shattered \n 5 for Overload \n 6 for Bloom \n 7 for Burgeon and hyperbloom"  );
       MTV[n] = scan.nextDouble() ;
       
       
       if (MTV[n]==0){
         MTV[0] += 1;
-      }
-
-      else;
+      }else if (MTV[n]==1){
+        MTV[1] += 1;
+      }else if (MTV[n]==2){
+        MTV[2] += 1;
+      }else if (MTV[n]==3){
+        MTV[3] += 1;
+      }else if (MTV[n]==4){
+        MTV[4] += 1;
+      }else if (MTV[n]==5){
+        MTV[5] += 1;
+      }else if (MTV[n]==6){
+        MTV[6] += 1;
+      }else if (MTV[n]==7){
+        MTV[7] += 1;
+      }else {
         System.out.println("You have entered a wrong value for MTV transformative multiplier Value ");
-         
+      } System.out.println(MTV); 
     }
+   
 
       
     scan.close();
@@ -66,6 +74,8 @@ public class Calgenshin{
     Double Basedammage = Attack[i]  * ( 1 + PDC[i] + DC[i]);
 
     Double MEpercentagebonus = 16*ME[i]/(ME[i] + 2000);
+
+
 
     
   }
