@@ -15,13 +15,14 @@ public class Calgenshin{
     Double[] ME = new Double[numberofcharacters];
     Double[] PDC = new Double[numberofcharacters];
     Double[] DC = new Double[numberofcharacters];
-    int[] MTVChoice = new int[numberofcharacters];
-    int[] MRAChoice = new int[numberofcharacters];
-    int[] MADChoice = new int[numberofcharacters];
+    int[] MTVChoice = new int[numberofcharacters]; 
+    int[] MRAChoice = new int[numberofcharacters]; 
+    int[] MADChoice = new int[numberofcharacters]; 
     Double[] MTV ={0.25, 0.5, 0.6, 1.2, 1.5, 2.0, 2.0, 3.0};//MTV transformative multiplier Value
     Double[] MRA ={1.5, 2.0};//MRA amplification reaction multiplier Value
     Double[] MAD ={1.15, 1.25};//MAD additive multiplier Value
      
+    
 
     for (int i = 0 ; i != numberofcharacters; i++) {
 

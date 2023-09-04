@@ -88,6 +88,17 @@ Los Multiplicadores Aditivos son los siguientes:
 %BonoME = 5 * Maestría Elemental/ (Maestría Elemental + 1200)   
 
 
+lista de cosas que faltan
+-metodo para las entradas de las caracteristicas dew cada personaje 
+
+- Entonces, el daño total es por grupo, pueden calcular máximo el daño de 4 personajes a la vez. El usuario podría definir si va a meter x número de equipos, podría ser una opción.
+
+-hay 10 usuarios y los grupos los crean cada uno cuando van a calcular. La idea es que mientras el programa está en ejecución se aseguren de guardar los últimos 10
+(ya sean calculados por grupo ó en forma individual)
+
+-que guardem equipos de o 4 persinajes que guarde el dano total de equipo o personaje y muestre los ultimos 10 (ayuda, de borrar el primer dato)
+
+
  
 
  
