@@ -1,23 +1,23 @@
-#Olimpiadas de mejor daño provocado en Genshin Impact 
+Olimpiadas de mejor daño provocado en Genshin Impact 
 
-#El objetivo de este programa es desarrollar una calculadora de daño que le permita poder experimentar como #podría alcanzar el daño más alto en el juego que son: transformativas, amplificativas y aditivas
-
-
-#Implementar las fórmulas de daño para cada una de las reacciones teniendo en cuenta los calculos de cada formula del daño 
-
-#Tambien se necesita calcular el daño realizado por un personaje o por un equipo
-
-#calcular según un tipo de reacción según el multiplicador de resistencia de un enemigo.
-
-#guardar los valores de los últimos 10 daños registrados en el sistema para su posterior consulta (sistema de memoria simple) 
+El objetivo de este programa es desarrollar una calculadora de daño que le permita poder experimentar como podría alcanzar el daño más alto en el juego que son: transformativas, amplificativas y aditivas
 
 
-#Mostrar el daño más alto realizado en la calculadora hasta el momento. 
+Implementar las fórmulas de daño para cada una de las reacciones teniendo en cuenta los calculos de cada formula del daño 
 
-#variables
+Tambien se necesita calcular el daño realizado por un personaje o por un equipo
+
+calcular según un tipo de reacción según el multiplicador de resistencia de un enemigo.
+
+guardar los valores de los últimos 10 daños registrados en el sistema para su posterior consulta (sistema de memoria simple) 
+
+
+Mostrar el daño más alto realizado en la calculadora hasta el momento. 
+
+variables
 -multiplicador de resistencia (Este último debe ser generado de manera aleatoria en un rango entre 0.5 y 2 únicamente.)
 
-#input
+input
 -cuantos personajes hay 1-4
 -nombre del personaje 
 -ataque del personaje
@@ -26,35 +26,18 @@
 -DC
 -ME
 
-#output
+output
 
 -Daño base
 -Daño Transformativo 
 -Daño Amplificador
 -Daño Aditivo
 
---------------------------------------------------------------------------------------------------------------------------------------------
-#Ejemplo en python
+Danobase = AtaquePersonaje * (1 + PDC + DC) output
 
-#Esta hecho en el hipotetico caso que fuera 1 solo personaje
+Además, para las reacciones transformativas el daño también se ve influenciado por el multiplicador de resistencia de los enemigos. 
 
-AtaquePersonaje = int(input("ingresa el Ataque del personaje ")) #entrada
-
-NivelPersonaje = int(input("ingresa el nivel del personaje")) #input
-
-ME = int(input("Ingresa la maestria elemental de tu personaje")) #entrada
-
-PDC = int(input("ingresa la probabilidad de daño critico "))  #input
-
-DC = int(input("ingresa la cantidad porcentual de daño critico en numero"))  #entrada
-
-Danobase = AtaquePersonaje * (1 + PDC + DC) #output
-
---------------------------------------------------------------------------------------------------------------------------------------------
-
-#Además, para las reacciones transformativas el daño también se ve influenciado por el multiplicador de #resistencia de los enemigos. 
-
-#Transformativas: 
+Transformativas: 
 
 Danobase = AtaquePersonaje * (1 + PDC + DC)
 
@@ -62,7 +45,7 @@ Danobase = AtaquePersonaje * (1 + PDC + DC)
 
 %BonoME = 16 * Maestría Elemental / (Maestría Elemental + 2000) 
 
-#Los Multiplicadores Transformativos son los siguientes:  
+Los Multiplicadores Transformativos son los siguientes:  
 
 0.25 para quemadura 
 
@@ -80,9 +63,9 @@ Danobase = AtaquePersonaje * (1 + PDC + DC)
 
 3.0 para sobre florecimiento y super quemadura. 
 
-#Amplificativas  
+Amplificativas  
 
-#Los Multiplicadores de Reacción de Amplificación son los siguientes: 
+Los Multiplicadores de Reacción de Amplificación son los siguientes: 
 1.5 para vaporización 
 2.0 para derretir. 
 
@@ -90,15 +73,15 @@ Multiplicador de amplificación = Multiplicador de reacción de Amplificación *
  
 %BonoME = 2.78* Maestría Elemental / (Maestría Elemental + 1400) 
 
-#Finalmente 
+Finalmente 
 
 ()Daño Amplificador = Daño Base*Multiplicador de reacción Amplificación. 
 
-#Multiplicadores de Reacción de Amplificación 
+Multiplicadores de Reacción de Amplificación 
 
 ()Daño Aditivo = Multiplicador Aditivo* Nivel Personaje * (1 + %BonoME)*Multiplicador resistencia 
 
-#Los Multiplicadores Aditivos son los siguientes: 
+Los Multiplicadores Aditivos son los siguientes: 
 1.15 para intensificación
 1.25 para propagación
 
