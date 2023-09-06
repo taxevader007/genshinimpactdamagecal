@@ -25,7 +25,7 @@ public class Calgenshin{
     DatosPersonaje(scan,numberofcharacters,numberofcharacters, Characters,Levels,Attack,ME,PDC,DC,MTVChoice,MRAChoice,MADChoice, MTV, MRA, MAD);
     }
 
-    public static void DatosPersonaje(Scanner scan,int numberofcharacters,int n,String[] Characters, Double [] Levels, Double[] Attack,Double[] ME,Double[] PDC,Double[] DC,int []MTVChoice ,int []MRAChoice ,int []MADChoice ,Double MTV[],Double MRA[],Double MAD[]){
+  public static void DatosPersonaje(Scanner scan,int numberofcharacters,int n,String[] Characters, Double [] Levels, Double[] Attack,Double[] ME,Double[] PDC,Double[] DC,int []MTVChoice ,int []MRAChoice ,int []MADChoice ,Double MTV[],Double MRA[],Double MAD[]){
      
 
     for (int i = 0 ; i != numberofcharacters; i++) {
