@@ -2,12 +2,12 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class Calgenshin{
+
   public static void main(String[] args) {  
-    Scanner scan = new Scanner(System.in);
-    System.out.println("Enter the number of character that youre going to use from 1 to 4 ");
-    int numberofcharacters =scan.nextInt(); // refers to number of characters
-  
     
+    Scanner scan = new Scanner(System.in);
+
+    int numberofcharacters = 4;//max number of characters 4 characters per team
 
     String[] Characters = new String[numberofcharacters]; //Array of character names
     Double[] Levels = new Double[numberofcharacters]; //Array about levels that the user enter to the character
@@ -22,11 +22,38 @@ public class Calgenshin{
     Double[] MRA ={1.5, 2.0};//MRA amplification reaction multiplier Value
     Double[] MAD ={1.15, 1.25};//MAD additive multiplier Value
 
-    DatosPersonaje(scan,numberofcharacters,numberofcharacters, Characters,Levels,Attack,ME,PDC,DC,MTVChoice,MRAChoice,MADChoice, MTV, MRA, MAD);
+    
+    DatosPersonaje(scan,numberofcharacters,Characters,Levels,Attack,ME,PDC,DC,MTVChoice,MRAChoice,MADChoice,MTV,MRA,MAD);
+
     }
 
-  public static void DatosPersonaje(Scanner scan,int numberofcharacters,int n,String[] Characters, Double [] Levels, Double[] Attack,Double[] ME,Double[] PDC,Double[] DC,int []MTVChoice ,int []MRAChoice ,int []MADChoice ,Double MTV[],Double MRA[],Double MAD[]){
-     
+  public static void DatosPersonaje(Scanner scan,int numberofcharacters,String[] Characters, Double [] Levels, Double[] Attack,Double[] ME,Double[] PDC,Double[] DC,int []MTVChoice ,int []MRAChoice ,int []MADChoice ,Double MTV[],Double MRA[],Double MAD[]){
+
+  boolean firstquestion = false;
+  boolean exit = false;
+
+  if (firstquestion == false){
+
+      System.out.println("Enter the number of character that youre going to use from 1 to 4 ");
+    numberofcharacters =scan.nextInt(); // refers to number of characters
+
+  }
+
+
+  while (exit == false) {   
+
+    
+    
+
+
+    while (numberofcharacters < 1 || numberofcharacters > 4) {
+      System.out.println("You have entered a wrong value for number of characters ");
+      System.out.println("Enter the number of character that youre going to use from 1 to 4 ");
+      numberofcharacters =scan.nextInt(); // refers to number of characters
+      
+    }
+
+
 
     for (int i = 0 ; i != numberofcharacters; i++) {
 
@@ -72,8 +99,24 @@ public class Calgenshin{
           }
       }
       formulas(numberofcharacters, Characters, Levels, Attack, ME, PDC, DC, MTVChoice, MRAChoice, MADChoice, MTV, MRA, MAD);
+
+      System.out.println("Do you want to add more teams of characters? \n 1 for yes \n 2 for no \n" );
+      int exitprogram = scan.nextInt();
+      if (exitprogram == 2){
+        exit = true;
+
+      }
+      else if (exitprogram == 1){
+        System.out.println("Enter the number of character that youre going to use from 1 to 4 ");
+        numberofcharacters =scan.nextInt(); // refers to number of characters
+        firstquestion = true;
+      }
+      else{
+        System.out.println("You have entered a wrong value for exit program ");
+      }
+
       
-    scan.close();
+  }
   }   
 
   public static void formulas(int n,String[] Characters, Double [] Levels, Double[] Attack,Double[] ME,Double[] PDC,Double[] DC,int []MTVChoice ,int []MRAChoice ,int []MADChoice ,Double MTV[],Double MRA[],Double MAD[]) {
