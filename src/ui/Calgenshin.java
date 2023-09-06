@@ -22,7 +22,7 @@ public class Calgenshin{
     Double[] MRA ={1.5, 2.0};//MRA amplification reaction multiplier Value
     Double[] MAD ={1.15, 1.25};//MAD additive multiplier Value
 
-    DatosPersonaje(scan,numberofcharacters,Characters,Levels,Attack,ME,PDC,DC,MTVChoice,MRAChoice,MADChoice);
+    DatosPersonaje(scan,numberofcharacters,numberofcharacters, Characters,Levels,Attack,ME,PDC,DC,MTVChoice,MRAChoice,MADChoice, MTV, MRA, MAD);
     }
 
     public static void DatosPersonaje(Scanner scan,int numberofcharacters,int n,String[] Characters, Double [] Levels, Double[] Attack,Double[] ME,Double[] PDC,Double[] DC,int []MTVChoice ,int []MRAChoice ,int []MADChoice ,Double MTV[],Double MRA[],Double MAD[]){
