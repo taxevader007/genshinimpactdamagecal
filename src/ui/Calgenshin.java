@@ -21,8 +21,12 @@ public class Calgenshin{
     Double[] MTV ={0.25, 0.5, 0.6, 1.2, 1.5, 2.0, 2.0, 3.0};//MTV transformative multiplier Value
     Double[] MRA ={1.5, 2.0};//MRA amplification reaction multiplier Value
     Double[] MAD ={1.15, 1.25};//MAD additive multiplier Value
+
+    DatosPersonaje(scan,numberofcharacters,Characters,Levels,Attack,ME,PDC,DC,MTVChoice,MRAChoice,MADChoice);
+    }
+
+    public static void DatosPersonaje(Scanner scan,int numberofcharacters,int n,String[] Characters, Double [] Levels, Double[] Attack,Double[] ME,Double[] PDC,Double[] DC,int []MTVChoice ,int []MRAChoice ,int []MADChoice ,Double MTV[],Double MRA[],Double MAD[]){
      
-    
 
     for (int i = 0 ; i != numberofcharacters; i++) {
 
@@ -70,7 +74,7 @@ public class Calgenshin{
       formulas(numberofcharacters, Characters, Levels, Attack, ME, PDC, DC, MTVChoice, MRAChoice, MADChoice, MTV, MRA, MAD);
       
     scan.close();
-  } //close main   
+  }   
 
   public static void formulas(int n,String[] Characters, Double [] Levels, Double[] Attack,Double[] ME,Double[] PDC,Double[] DC,int []MTVChoice ,int []MRAChoice ,int []MADChoice ,Double MTV[],Double MRA[],Double MAD[]) {
     Random rand = new Random();
