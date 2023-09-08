@@ -89,15 +89,11 @@ Los Multiplicadores Aditivos son los siguientes:
 
 
 lista de cosas que faltan
--metodo para las entradas de las caracteristicas dew cada personaje 
-
-- Entonces, el daño total es por grupo, pueden calcular máximo el daño de 4 personajes a la vez. El usuario podría definir si va a meter x número de equipos, podría ser una opción.
 
 -hay 10 usuarios y los grupos los crean cada uno cuando van a calcular. La idea es que mientras el programa está en ejecución se aseguren de guardar los últimos 10
-(ya sean calculados por grupo ó en forma individual)
+(ya sean calculados por grupo ó en forma individual) y (hacer un ciclo los 10 últimos daños y borrar los primero para poner nuevos de ser necesario)
 
--que guardem equipos de o 4 persinajes que guarde el dano total de equipo o personaje y muestre los ultimos 10 (ayuda, de borrar el primer dato)
-
+-mostrar daño mas alto
 
  
 
