@@ -95,6 +95,9 @@ lista de cosas que faltan
 
 -mostrar daño mas alto
 
- 
+asinar un null si es string y 0 si es string
+
+ link para diseño 
+ https://miro.com/welcomeonboard/dUpBVVNtSkxzZEczeHZkamhjV0RocndJV3hOdG5PbnFIVFhRdUVsRnBBc1E2ZFJIOWh4elowN1Y2dzcxSmJiZHwzNDU4NzY0NTU3NjcxNTcyMDQ2fDI=?share_link_id=342037766093
 
  
