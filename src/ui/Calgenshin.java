@@ -24,13 +24,15 @@ public class Calgenshin {
   }
 
   /**
-   * Descripción: ¿Qué hace mi método? (concisa, un par de líneas) † pre: ¿Cuáles
-   * son las condiciones sobre las variables globales?
+   * Descripción: Metodo del bucle del menu que se le pregunta al usuario 
+   * pre: que sea llamado por el main
+   * la variable global major dammage que se imprime al selecionar la condicion 2 muestra el daño mas alto
+   * la variable global damageTop que se imprime al selecionar la condicion 3 muestra los ultimos 10 daños
    * pos: ¿Cuáles fueron los cambios sobre las variables globales?
+   * en el case 4 se sale del programa con la condicion exit
    * 
-   * @param <nombre_par>   <tipo> <condiciones sobre el parámetro>
-   * @param <nombre_par_n> ‹tipo> ‹condiciones sobre el parámetro n>
-   * @return <nombre_var> <tipo> <información sobre variable de retorno>
+   * @param <>
+   * @return <int> <option> <post resultado de la descicion del usuario>
    */
   public static void menu() {
     while (true) {
@@ -61,13 +63,15 @@ public class Calgenshin {
 
 
   /**
-   * Descripción: ¿Qué hace mi método? (concisa, un par de líneas) † pre: ¿Cuáles
-   * son las condiciones sobre las variables globales?
+   * Descripción: Metodo del arreglo de los ultimos 10 daños
+   * pre: que sea llamado por el menu
+   * la variable global major dammage que se imprime al selecionar la condicion 2 muestra el daño mas alto
+   * la variable global damageTop que se imprime al selecionar la condicion 3 muestra los ultimos 10 daños
    * pos: ¿Cuáles fueron los cambios sobre las variables globales?
+   * en el case 4 se sale del programa con la condicion exit
    * 
-   * @param <nombre_par>   <tipo> <condiciones sobre el parámetro>
-   * @param <nombre_par_n> ‹tipo> ‹condiciones sobre el parámetro n>
-   * @return <nombre_var> <tipo> <información sobre variable de retorno>
+   * @param <>
+   * @return <int> <option> <post resultado de la descicion del usuario>
    */
   public static String seeDamageTop() {
     String top = "";
@@ -81,15 +85,21 @@ public class Calgenshin {
   }
 
   /**
-   * Descripción: ¿Qué hace mi método? (concisa, un par de líneas) † pre: ¿Cuáles
-   * son las condiciones sobre las variables globales?
-   * pos: ¿Cuáles fueron los cambios sobre las variables globales?
+   * Descripción: ¿Qué hace mi método?
+   * el metodo datos personaje pide los datos de los personajes y los guarda en un arreglo
    * 
-   * @param <nombre_par>   <tipo> <condiciones sobre el parámetro>
-   * @param <nombre_par_n> ‹tipo> ‹condiciones sobre el parámetro n>
-   * @return <nombre_var> <tipo> <información sobre variable de retorno>
+   * pre:
+   * que sea llamado por el menu
+   * se necesita que el usuario ingrese los datos de los personajes
+   * pos:
+   * que se terminen de llenar los arreglos de los personajes
+   * 
+   * @param <> <>
+   * @return <> <> <>
+   * 
    */
-  public static void datosPersonaje() {
+  
+   public static void datosPersonaje() {
     int numberofcharacters = 0;
     boolean firstquestion = false;
     boolean exit = false;
@@ -172,14 +182,29 @@ public class Calgenshin {
 
 
   /**
-   * Descripción: ¿Qué hace mi método? (concisa, un par de líneas) † pre: ¿Cuáles
-   * son las condiciones sobre las variables globales?
-   * pos: ¿Cuáles fueron los cambios sobre las variables globales?
+   * Descripción: Metodo hace calculos de daño de los personajes
+   * pre: que sea llamado por datos personaje
    * 
-   * @param <nombre_par>   <tipo> <condiciones sobre el parámetro>
-   * @param <nombre_par_n> ‹tipo> ‹condiciones sobre el parámetro n>
-   * @return <nombre_var> <tipo> <información sobre variable de retorno>
+   * pos: 
+   * que se termine de hacer el daño de los personajes
+   * 
+   * @param <double> <basedammage> <calculo del daño base >
+   * @param <double> <percentagebonusME> <calculo del porcentaje de bonificacion de daño>
+   * @param <double> <transformative_dammage> <calculo del daño transformador>
+   * @param <double> <amplificationReactionMultiplier> <calculo del multiplicador de reaccion de amplificacion>
+   * @param <double> <amplificationBonusME> <calculo del bono de amplificacion de daño>
+   * @param <double> <amplificationMultiplier> <calculo del multiplicador de amplificacion>
+   * @param <double> <amplifierDamage> <calculo del daño amplificador>
+   * @param <double> <additiveDamageMultiplier> <calculo del multiplicador de daño aditivo>
+   * @param <double> <additiveBonusME> <calculo del bono de daño aditivo>
+   * @param <double> <additiveDamage> <calculo del daño aditivo>
+   * @param <double> <totalDamage> <calculo del daño total>
+   * @param <double> <majorDamage> <calculo del daño mayor>
+   * @param <double> <damageTop> <calculo del daño top>
+   * 
+   * @return <> <> <>
    */
+
   public static void formulas(String[] characters) {
     Random rand = new Random();
     double min = 0.5;
@@ -211,14 +236,16 @@ public class Calgenshin {
 
 
   /**
-   * Descripción: ¿Qué hace mi método? (concisa, un par de líneas) † pre: ¿Cuáles
-   * son las condiciones sobre las variables globales?
-   * pos: ¿Cuáles fueron los cambios sobre las variables globales?
+   * Descripción: suma el daño total de los personajes (equipo)
+   * pre: que sea llamado por formulas
    * 
-   * @param <nombre_par>   <tipo> <condiciones sobre el parámetro>
-   * @param <nombre_par_n> ‹tipo> ‹condiciones sobre el parámetro n>
-   * @return <nombre_var> <tipo> <información sobre variable de retorno>
+   * pos:
+   * que se calculen los daños totales de los personajes (equipo)  
+   * 
+   * @param <int> <total> <post resultado de la descicion del usuario>
+   * @return <int> <total> <ahora si porfin el dano total>
    */
+
   public static double sumTotalDamage() {
     int total = 0;
     for (int i = 0; i < characters.length; i++) {
@@ -229,16 +256,18 @@ public class Calgenshin {
   }
 
   /**
-   * Descripción: ¿Qué hace mi método? (concisa, un par de líneas) † pre: ¿Cuáles
-   * son las condiciones sobre las variables globales?
-   * pos: ¿Cuáles fueron los cambios sobre las variables globales?
+   * Descripción: metodo de el arreglo de los 10 ultimos daños 
+   * pre: que sea llamado por seeDamageTop
    * 
-   * @param <nombre_par>   <tipo> <condiciones sobre el parámetro>
-   * @param <nombre_par_n> ‹tipo> ‹condiciones sobre el parámetro n>
-   * @return <nombre_var> <tipo> <información sobre variable de retorno>
+   * pos:
+   * que se cumplan una de las condiciones para que se agregue el daño al arreglo o lo corra si ya esta lleno
+   * 
+   * @param <>
+   * @return <> <> <>
    */
+
   public static void addDamageTop(double damage) {
-    boolean added = false;
+    boolean added = false;  
     for (int i = 0; (i < damageTop.length) && !added; i++) {
       if ((damageTop.length - 1 == i) && (damageTop[i] != 0.0)) {
         orderDamageTop(damage);
@@ -254,14 +283,15 @@ public class Calgenshin {
   }
 
   /**
-   * Descripción: ¿Qué hace mi método? (concisa, un par de líneas) † pre: ¿Cuáles
-   * son las condiciones sobre las variables globales?
-   * pos: ¿Cuáles fueron los cambios sobre las variables globales?
+   * Descripción: Metodo del bucle del menu que se le pregunta al usuario 
+   * pre: que sea llamado por el addDamageTop
+   * pos:
+   * que se cumplan una de las condiciones para que se agregue el daño al arreglo o lo corra si ya esta lleno
    * 
-   * @param <nombre_par>   <tipo> <condiciones sobre el parámetro>
-   * @param <nombre_par_n> ‹tipo> ‹condiciones sobre el parámetro n>
-   * @return <nombre_var> <tipo> <información sobre variable de retorno>
+   * @param <>
+   * @return <> <> <>
    */
+
   public static void orderDamageTop(double damage) {
     for (int i = 0; i < damageTop.length; i++) {
       damageTop[i - 1] = damageTop[i];
