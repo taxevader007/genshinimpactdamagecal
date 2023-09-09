@@ -1,103 +1,103 @@
-Olimpiadas de mejor daño provocado en Genshin Impact 
+Olympics of best damage caused in Genshin Impact
 
-El objetivo de este programa es desarrollar una calculadora de daño que le permita poder experimentar como podría alcanzar el daño más alto en el juego que son: transformativas, amplificativas y aditivas
-
-
-Implementar las fórmulas de daño para cada una de las reacciones teniendo en cuenta los calculos de cada formula del daño 
-
-Tambien se necesita calcular el daño realizado por un personaje o por un equipo
-
-calcular según un tipo de reacción según el multiplicador de resistencia de un enemigo.
-
-guardar los valores de los últimos 10 daños registrados en el sistema para su posterior consulta (sistema de memoria simple) 
+The goal of this program is to develop a damage calculator that allows you to experiment with how you could achieve the highest damage in the game which are: transformative, amplificative and additive.
 
 
-Mostrar el daño más alto realizado en la calculadora hasta el momento. 
+Implement the damage formulas for each of the reactions taking into account the calculations of each damage formula.
+
+You also need to calculate the damage done by a character or a team.
+
+Calculates based on a reaction type based on an enemy's stamina multiplier.
+
+save the values of the last 10 damages recorded in the system for later reference (simple memory system)
+
+
+Show the highest damage done in the calculator so far.
 
 variables
--multiplicador de resistencia (Este último debe ser generado de manera aleatoria en un rango entre 0.5 y 2 únicamente.)
+-stamina multiplier (The latter must be generated randomly in a range between 0.5 and 2 only.)
 
 input
--cuantos personajes hay 1-4
--nombre del personaje 
--ataque del personaje
--nivel del personaje
+-how many characters are there 1-4
+-character's name
+-attack on character
+-character level
 -PDC
 -DC
 -ME
 
-output
+production
 
--Daño base
--Daño Transformativo 
--Daño Amplificador
--Daño Aditivo
+-Base damage
+-Transformative Damage
+-Amplifier Damage
+-Additive Damage
 
-Danobase = AtaquePersonaje * (1 + PDC + DC) output
+Danobase = CharacterAttack * (1 + PDC + DC) output
 
-Además, para las reacciones transformativas el daño también se ve influenciado por el multiplicador de resistencia de los enemigos. 
+Additionally, for transformative reactions the damage is also influenced by the enemies' resistance multiplier.
 
-Transformativas: 
+Transformative:
 
-Danobase = AtaquePersonaje * (1 + PDC + DC)
+Danobase = CharacterAttack * (1 + PDC + DC)
 
-()Daño Transformativo = Multiplicador Transformativo*Nivel personaje *(1 + %BonoME) *Multiplicador resistencia 
+()Transformative Damage = Transformative Multiplier*Character Level *(1 + %MEBonus) *Stamina Multiplier
 
-%BonoME = 16 * Maestría Elemental / (Maestría Elemental + 2000) 
+%MEBonus = 16 * Elemental Mastery / (Elemental Mastery + 2000)
 
-Los Multiplicadores Transformativos son los siguientes:  
+The Transformative Multipliers are the following:
 
-0.25 para quemadura 
+0.25 for burn
 
-0.50 para superconductor 
+0.50 for superconductor
 
-0.6 para torbellino 
+0.6 for whirlwind
 
-1.2 para electro cargado 
+1.2 for electrical load
 
-1.5 para cristalización 
+1.5 for crystallization
 
-2.0 para sobrecargado
+2.0 to overload
 
-2.0 para florecimiento 
+2.0 to flourish
 
-3.0 para sobre florecimiento y super quemadura. 
+3.0 for over bloom and super burn.
 
-Amplificativas  
+amplificative
 
-Los Multiplicadores de Reacción de Amplificación son los siguientes: 
-1.5 para vaporización 
-2.0 para derretir. 
+The Amplification Reaction Multipliers are as follows:
+1.5 for vaporization
+2.0 to retire.
 
-Multiplicador de amplificación = Multiplicador de reacción de Amplificación *(1 + %BonoME )  
+Amplification multiplier = Amplification reaction multiplier *(1 + %BonoME)
  
-%BonoME = 2.78* Maestría Elemental / (Maestría Elemental + 1400) 
+%MEBonus = 2.78* Elemental Mastery / (Elemental Mastery + 1400)
 
-Finalmente 
+finally
 
-()Daño Amplificador = Daño Base*Multiplicador de reacción Amplificación. 
+()Amplifier Damage = Base Damage*Amplification Reaction Multiplier.
 
-Multiplicadores de Reacción de Amplificación 
+Amplification Reaction Multipliers
 
-()Daño Aditivo = Multiplicador Aditivo* Nivel Personaje * (1 + %BonoME)*Multiplicador resistencia 
+()Additive Damage = Additive Multiplier* Character Level * (1 + %MEBonus)*Stamina Multiplier
 
-Los Multiplicadores Aditivos son los siguientes: 
-1.15 para intensificación
-1.25 para propagación
+The Additive Multipliers are as follows:
+1.15 for intensification
+1.25 for spread
 
-%BonoME = 5 * Maestría Elemental/ (Maestría Elemental + 1200)   
+%MEBonus = 5 * Elemental Mastery/ (Elemental Mastery + 1200)
 
 
-lista de cosas que faltan
+list of things missing
 
--hay 10 usuarios y los grupos los crean cada uno cuando van a calcular. La idea es que mientras el programa está en ejecución se aseguren de guardar los últimos 10
-(ya sean calculados por grupo ó en forma individual) y (hacer un ciclo los 10 últimos daños y borrar los primero para poner nuevos de ser necesario)
+-There are 10 users and each one creates the groups when they are going to calculate. The idea is that while the program is running they make sure to save the last 10
+(whether calculated by group or individually) and (cycle the last 10 damages and delete the first to add new ones if necessary)
 
--mostrar daño mas alto
+-show higher damage
 
-asinar un null si es string y 0 si es string
+Assign a null if it is a string and 0 if it is a string
 
- link para diseño 
+   link for design of the program
  https://miro.com/welcomeonboard/dUpBVVNtSkxzZEczeHZkamhjV0RocndJV3hOdG5PbnFIVFhRdUVsRnBBc1E2ZFJIOWh4elowN1Y2dzcxSmJiZHwzNDU4NzY0NTU3NjcxNTcyMDQ2fDI=?share_link_id=342037766093
 
  
