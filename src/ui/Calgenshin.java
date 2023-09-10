@@ -1,6 +1,9 @@
 import java.util.Scanner;
 import java.util.Random;
+/**
+   * Descripción: The goal of this program is to develop a damage calculator that allows you to experiment with how you could achieve the highest damage in the game Genshin Impact.
 
+   */
 public class Calgenshin {
   static String[] characters;
   static Double[] levels;
@@ -18,7 +21,17 @@ public class Calgenshin {
   static Scanner scan = new Scanner(System.in);
   static double majorDamage = 0.0;
   static double[] damageTop = new double[10];
-
+  //global variable declarations
+  /**
+   * Description: Default constructor for the Calgenshin class.
+   */
+  public Calgenshin() {
+    // This is an empty constructor.
+  }
+  /**
+   * Description: Main entry point of the program. It displays a menu to the user and handles their choices.
+   * @param args The command-line arguments (unused in this program).
+   */
   public static void main(String[] args) {
     menu();
   }
@@ -31,8 +44,6 @@ public class Calgenshin {
    * pos: ¿Cuáles fueron los cambios sobre las variables globales?
    * en el case 4 se sale del programa con la condicion exit
    * 
-   * @param <>
-   * @return <int> <option> <post resultado de la descicion del usuario>
    */
   public static void menu() {
     while (true) {
@@ -59,19 +70,14 @@ public class Calgenshin {
           break;
       }
     }
+    //menu implementation
   }
 
 
   /**
-   * Descripción: Metodo del arreglo de los ultimos 10 daños
-   * pre: que sea llamado por el menu
-   * la variable global major dammage que se imprime al selecionar la condicion 2 muestra el daño mas alto
-   * la variable global damageTop que se imprime al selecionar la condicion 3 muestra los ultimos 10 daños
-   * pos: ¿Cuáles fueron los cambios sobre las variables globales?
-   * en el case 4 se sale del programa con la condicion exit
-   * 
-   * @param <>
-   * @return <int> <option> <post resultado de la descicion del usuario>
+   * Description: Displays the top 10 damage values from the 'damageTop' array.
+   *
+   * @return A string containing the top 10 damage values.
    */
   public static String seeDamageTop() {
     String top = "";
@@ -85,18 +91,7 @@ public class Calgenshin {
   }
 
   /**
-   * Descripción: ¿Qué hace mi método?
-   * el metodo datos personaje pide los datos de los personajes y los guarda en un arreglo
-   * 
-   * pre:
-   * que sea llamado por el menu
-   * se necesita que el usuario ingrese los datos de los personajes
-   * pos:
-   * que se terminen de llenar los arreglos de los personajes
-   * 
-   * @param <> <>
-   * @return <> <> <>
-   * 
+   * Description: Collects and stores character data from the user.
    */
   
    public static void datosPersonaje() {
@@ -182,27 +177,9 @@ public class Calgenshin {
 
 
   /**
-   * Descripción: Metodo hace calculos de daño de los personajes
-   * pre: que sea llamado por datos personaje
-   * 
-   * pos: 
-   * que se termine de hacer el daño de los personajes
-   * 
-   * @param <double> <basedammage> <calculo del daño base >
-   * @param <double> <percentagebonusME> <calculo del porcentaje de bonificacion de daño>
-   * @param <double> <transformative_dammage> <calculo del daño transformador>
-   * @param <double> <amplificationReactionMultiplier> <calculo del multiplicador de reaccion de amplificacion>
-   * @param <double> <amplificationBonusME> <calculo del bono de amplificacion de daño>
-   * @param <double> <amplificationMultiplier> <calculo del multiplicador de amplificacion>
-   * @param <double> <amplifierDamage> <calculo del daño amplificador>
-   * @param <double> <additiveDamageMultiplier> <calculo del multiplicador de daño aditivo>
-   * @param <double> <additiveBonusME> <calculo del bono de daño aditivo>
-   * @param <double> <additiveDamage> <calculo del daño aditivo>
-   * @param <double> <totalDamage> <calculo del daño total>
-   * @param <double> <majorDamage> <calculo del daño mayor>
-   * @param <double> <damageTop> <calculo del daño top>
-   * 
-   * @return <> <> <>
+   * Description: Calculates the total damage for each character based on the input data.
+   *
+   * @param characters An array of character names.
    */
 
   public static void formulas(String[] characters) {
@@ -236,14 +213,9 @@ public class Calgenshin {
 
 
   /**
-   * Descripción: suma el daño total de los personajes (equipo)
-   * pre: que sea llamado por formulas
-   * 
-   * pos:
-   * que se calculen los daños totales de los personajes (equipo)  
-   * 
-   * @param <int> <total> <post resultado de la descicion del usuario>
-   * @return <int> <total> <ahora si porfin el dano total>
+   * Description: Sums the total damage of all characters in the team.
+   *
+   * @return The total damage of the team.
    */
 
   public static double sumTotalDamage() {
@@ -255,15 +227,10 @@ public class Calgenshin {
     return total;
   }
 
-  /**
-   * Descripción: metodo de el arreglo de los 10 ultimos daños 
-   * pre: que sea llamado por seeDamageTop
-   * 
-   * pos:
-   * que se cumplan una de las condiciones para que se agregue el daño al arreglo o lo corra si ya esta lleno
-   * 
-   * @param <>
-   * @return <> <> <>
+   /**
+   * Description: Adds a damage value to the 'damageTop' array and maintains the top 10 values.
+   *
+   * @param damage The damage value to add.
    */
 
   public static void addDamageTop(double damage) {
@@ -283,13 +250,9 @@ public class Calgenshin {
   }
 
   /**
-   * Descripción: Metodo del bucle del menu que se le pregunta al usuario 
-   * pre: que sea llamado por el addDamageTop
-   * pos:
-   * que se cumplan una de las condiciones para que se agregue el daño al arreglo o lo corra si ya esta lleno
-   * 
-   * @param <>
-   * @return <> <> <>
+   * Description: Reorders the 'damageTop' array after adding a new value.
+   *
+   * @param damage The last added damage value.
    */
 
   public static void orderDamageTop(double damage) {
@@ -297,6 +260,7 @@ public class Calgenshin {
       damageTop[i - 1] = damageTop[i];
     }
     damageTop[damageTop.length - 1] = damage;
+    //orderDamageTop (damage);
   }
-
+  
 }
